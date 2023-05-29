@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./App.css";
+import { UserProfileForm } from "./components/UserProfileForm";
 
+const App: React.FC = () => {
+  const initialUserProfile = {
+    name: "",
+    email: "",
+    profilePicture: "",
+    interests: [],
+  };
+  const [userProfile, setUserProfile] = useState(initialUserProfile);
+
+  const handleSaveUserProfile = (updatedUserProfile: UserProfile) => {
+    setUserProfile(updatedUserProfile);
+  };
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h2>Hola Mundo!</h2>
+      <UserProfileForm
+        userProfile={userProfile}
+        onSave={handleSaveUserProfile}
+      />
+      <h2>Preview</h2>
+      <p>Name: {userProfile.name}</p>
+      <p>Email: {userProfile.email}</p>
+      <p>Profile Picture: {userProfile.profilePicture}</p>
+      <p>Interests: {userProfile.interests.join(", ")}</p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
