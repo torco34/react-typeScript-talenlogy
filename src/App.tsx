@@ -2,7 +2,8 @@ import { useState } from "react";
 
 import "./App.css";
 import { UserProfileForm } from "./components/UserProfileForm";
-
+import { Perfil } from "./components/Perfil";
+import { ChangeEvent } from "react";
 const App: React.FC = () => {
   const initialUserProfile = {
     name: "",
@@ -24,6 +25,14 @@ const App: React.FC = () => {
   };
   return (
     <div className="border">
+      <Perfil />
+      {imagen && (
+        <img
+          className="img"
+          src={URL.createObjectURL(imagen)}
+          alt="Mi Foto de Perfil...."
+        />
+      )}
       <UserProfileForm
         userProfile={userProfile}
         onSave={handleSaveUserProfile}
@@ -33,13 +42,6 @@ const App: React.FC = () => {
           Profile Picture:
           <input type="file" onChange={handleImagenSeleccionada} />
         </label>
-        {imagen && (
-          <img
-            className="img"
-            src={URL.createObjectURL(imagen)}
-            alt="Mi Foto de Perfil...."
-          />
-        )}
       </div>
       <h2>Preview</h2>
       <p>Name: {userProfile.name}</p>

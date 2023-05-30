@@ -4,11 +4,6 @@ import Col from "react-bootstrap/Col";
 import "../App.css";
 import { useState, ChangeEvent } from "react";
 
-
-type colors = 'red' | "yellow"| 'blue'
-
-let color: colors = 'green'
-
 export type UserProfile = {
   name: string;
   email: string;
@@ -46,8 +41,6 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({
       <Container>
         <Row>
           <Col lg={6}>
-          
-
             <div className="boton">
               <button onClick={handleSave}>salvar</button>
             </div>
@@ -69,8 +62,6 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({
                 onChange={(e) => setEmail(e.target.value)}
               />
             </label>
-
-         
 
             <label>
               {/* Interests (comma-separated): */}
