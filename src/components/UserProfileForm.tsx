@@ -57,8 +57,8 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({
                 alt="Mi Foto de Perfil...."
               />
             )}
-            <p>Name: {userProfile.name}</p>
-            <p>Email: {userProfile.email}</p>s
+            <p>Nombre:{userProfile.name}</p>
+            <p>Email: {userProfile.email}</p>
             <p>Interests: {userProfile.interests.join(", ")}</p>
           </Col>
           <Col lg={6}>

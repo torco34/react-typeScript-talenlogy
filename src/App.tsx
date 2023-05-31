@@ -24,13 +24,7 @@ const App: React.FC = () => {
         userProfile={userProfile}
         onSave={handleSaveUserProfile}
       />
-      <div>
-        <label>
-          Profile Picture:
-          {/* <input type="file" onChange={handleImagenSeleccionada} /> */}
-        </label>
-        <Perfil />
-      </div>
+    
     </div>
   );
 };
