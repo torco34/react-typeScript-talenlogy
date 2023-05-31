@@ -4,12 +4,12 @@ import Col from "react-bootstrap/Col";
 import "../App.css";
 import { useState, ChangeEvent } from "react";
 
-export type UserProfile = {
+interface UserProfile {
   name: string;
   email: string;
   profilePicture: string;
   interests: string[];
-};
+}
 
 interface UserProfileFormProps {
   userProfile: UserProfile;
@@ -24,6 +24,15 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({
   const [profilePicture, setProfilePicture] = useState(
     userProfile.profilePicture
   );
+
+  //
+  const [imagen, setImagen] = useState<File | null>(null);
+  const handleImagenSeleccionada = (event: ChangeEvent<HTMLInputElement>) => {
+    const archivo = event.target.files?.[0];
+    setImagen(archivo || null);
+  };
+
+  //
   const [interests, setInterests] = useState(userProfile.interests.join(", "));
   const handleSave = () => {
     const updatedProfile: UserProfile = {
@@ -41,36 +50,52 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({
       <Container>
         <Row>
           <Col lg={6}>
-            <div className="boton">
-              <button onClick={handleSave}>salvar</button>
-            </div>
+            {imagen && (
+              <img
+                className="img"
+                src={URL.createObjectURL(imagen)}
+                alt="Mi Foto de Perfil...."
+              />
+            )}
+            <p>Name: {userProfile.name}</p>
+            <p>Email: {userProfile.email}</p>s
+            <p>Interests: {userProfile.interests.join(", ")}</p>
           </Col>
           <Col lg={6}>
-            <label>
-              Name:
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </label>
-            <label>
-              Email:
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </label>
+            <div className="formFather">
+              <label>
+                Name:
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </label>
+              <label>
+                Email:
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </label>
+              <label>
+                Interests:
+                <input
+                  type="text"
+                  value={interests}
+                  onChange={(e) => setInterests(e.target.value)}
+                />
+              </label>
 
-            <label>
-              {/* Interests (comma-separated): */}
-              <input
-                type="text"
-                value={interests}
-                onChange={(e) => setInterests(e.target.value)}
-              />
-            </label>
+              <label>
+                <div className="botonfile">
+                  <button onClick={handleSave}>
+                    <input type="file" onChange={handleImagenSeleccionada} />
+                  </button>
+                </div>
+              </label>
+            </div>
           </Col>
         </Row>
       </Container>
