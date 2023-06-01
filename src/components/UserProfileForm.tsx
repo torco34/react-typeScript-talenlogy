@@ -9,6 +9,8 @@ interface UserProfile {
   email: string;
   profilePicture: string;
   interests: string[];
+
+  // array
 }
 
 interface UserProfileFormProps {
@@ -58,6 +60,7 @@ export const UserProfileForm: React.FC<UserProfileFormProps> = ({
               />
             )}
             <p>Nombre:{userProfile.name}</p>
+
             <p>Email: {userProfile.email}</p>
             <p>Interests: {userProfile.interests.join(", ")}</p>
           </Col>
