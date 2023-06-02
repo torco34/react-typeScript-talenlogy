@@ -9,7 +9,6 @@ interface UserProfile {
   email: string;
   profilePicture: string;
   interests: string[];
-
   // array
 }
 
