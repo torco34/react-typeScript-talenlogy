@@ -4,7 +4,7 @@ import { Perfil } from "./pages/Perfil";
 import { Header } from "./components/Header";
 import { Inicio } from "./pages/Inicio";
 import { Ejercicio } from "./components/ejercicio/Ejercicio";
-
+import { Pages } from "./components/Resaturan/Pages";
 const App: React.FC = () => {
   return (
     <Router>
@@ -13,6 +13,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Inicio />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/ejercicio" element={<Ejercicio />} />
+        <Route path="/restauran" element={<Pages />} />
         {/* <Route path="/index" element={<Index />}></Route>
         <Route path="/pages" element={<Pages2 />}></Route>
         <Route path="/pages2" element={<Books />}></Route>
