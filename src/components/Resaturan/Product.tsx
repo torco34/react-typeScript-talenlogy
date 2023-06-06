@@ -1,9 +1,7 @@
-
-
 export const Product = () => {
   return (
     <div>
-        {/* con filter
+      {/* con filter
         tipo de comida 
         ubicación
         Lista de restaurante
@@ -15,5 +13,5 @@ export const Product = () => {
         .
          */}
     </div>
-  )
-}
+  );
+};

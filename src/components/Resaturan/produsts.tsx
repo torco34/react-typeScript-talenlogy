@@ -7,13 +7,13 @@ export const produsts = [
   },
   {
     id: 2,
-    name: "Cafe y Som",
+    name: "Restauran Cafe y Som",
     producto: "Cafe, Pan de Bono, buñuelos",
     direction: "Riviera",
   },
   {
     id: 3,
-    name: "Especies",
+    name: "Restauran Especies",
     producto: "Pastas carbonaras, lasana, canelones,",
     direction: "San Eduardo",
   },

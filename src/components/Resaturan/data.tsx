@@ -1,7 +1,6 @@
 export interface Task {
   id: number;
-  tipoDeComida: string;
-  listaRestauran: string;
-  ubicacion: boolean;
-  informacion: string;
+  name: string;
+  producto: string;
+  direction: string;
 }

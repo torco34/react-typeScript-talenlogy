@@ -7,7 +7,7 @@ interface Props {
   title: string;
 }
 
-export const Ejercicio = ({title}: Props) => {
+export const Ejercicio = ({ title }: Props) => {
   const [tasks, setTask] = useState<Task[]>([
     {
       id: 1,
@@ -20,12 +20,11 @@ export const Ejercicio = ({title}: Props) => {
     <div className="bg-info">
       <br></br>
       <h1 className="text-light bg-info"> TepyScript{title}</h1>
-    
 
       <main className="container p-4 text-light">
         <Product tasks={tasks} />
 
-        <FormuTaks/>
+        <FormuTaks />
       </main>
     </div>
   );
