@@ -1,4 +1,10 @@
-export const Product = () => {
+import { Body } from "./Body";
+import { Task } from "./interface/Task";
+interface Props {
+  task: Task[];
+}
+
+export const Product = ({ task }: Props) => {
   return (
     <div>
       {/* con filter
@@ -12,6 +18,11 @@ export const Product = () => {
         y la lista con todo los datos
         .
          */}
+      {task.map((task) => (
+        <div>
+          <Body task={task} />
+        </div>
+      ))}
     </div>
   );
 };

@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { Task } from "./data";
+import { Task } from "./interface/Task";
 import { produsts } from "./produsts";
+import { Product } from "./Product";
 interface Props {
   name: string;
 }
 export const Pages = ({ name }: Props) => {
-  const [pruct, setPruct] = useState<Task[]>(produsts);
+  const [task, setTask] = useState<Task[]>(produsts);
   return (
     <div className="text-center">
       <form action="">
         <input type="text" />
       </form>
-      {pruct.map((produ) => (
-        <div>{produ.name}</div>
-      ))}
+      <Product task={task} />
     </div>
   );
 };
