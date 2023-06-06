@@ -9,8 +9,15 @@ export const Pages = ({ name }: Props) => {
   const [task, setTask] = useState<Task[]>(produsts);
   return (
     <div className="text-center">
+      <br></br>
       <form action="">
-        <input type="text" />
+        <div className="container">
+          <input
+            type="search"
+            placeholder="Search"
+            className="form-control me-2"
+          />
+        </div>
       </form>
       <Product task={task} />
     </div>
