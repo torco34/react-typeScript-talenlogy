@@ -19,7 +19,7 @@ export const Product = ({ task }: Props) => {
         .
          */}
       {task.map((task) => (
-        <div>
+        <div key={task.id}>
           <Body task={task} />
         </div>
       ))}

@@ -5,11 +5,14 @@ interface Props {
   task: Task;
 }
 export const Body = ({ task }: Props) => {
-  const [showInfo, setShowInfo] = useState<Task>(null);
+  const [showInfo, setShowInfo] = useState<Task | null>(null);
 
   function showData() {
-    console.log(`Hola mundo`);
-    setShowInfo(task);
+    if (!showInfo) {
+      setShowInfo(task);
+    } else {
+      setShowInfo(null);
+    }
   }
   return (
     <div>
