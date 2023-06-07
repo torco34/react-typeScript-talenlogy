@@ -2,19 +2,23 @@ import { useState } from "react";
 import { Task } from "./interface/Task";
 import { produsts } from "./produsts";
 import { Product } from "./Product";
+
 interface Props {
   name: string;
 }
+
 export const Pages = ({ name }: Props) => {
-  const [task, setFilteredTasks] = useState<Task[]>(produsts);
+  const [tasks, setTasks] = useState<Task[]>(produsts);
 
   function handleFilter(event: React.ChangeEvent<HTMLInputElement>) {
-    console.log(event.target.value);
-    const filterText = event.target.value;
-    const filtered = task.filter((task) =>
-      task.name.toLowerCase().includes(filterText.toLowerCase())
+    const filterText = event.target.value.toLowerCase();
+    const filteredTasks = produsts.filter(
+      (task) =>
+        task.name.toLowerCase().includes(filterText) ||
+        task.producto.toLowerCase().includes(filterText) ||
+        task.direction.toLowerCase().includes(filterText)
     );
-    setFilteredTasks(filtered);
+    setTasks(filteredTasks);
   }
 
   return (
@@ -27,7 +31,7 @@ export const Pages = ({ name }: Props) => {
         </div>
       </form>
 
-      <Product task={task} />
+      <Product task={tasks} />
     </div>
   );
 };
