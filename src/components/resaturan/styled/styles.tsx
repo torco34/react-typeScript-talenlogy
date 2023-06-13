@@ -22,12 +22,27 @@ export const Formulario = styled.div`
   }
 `;
 export const ContainerBody = styled.div`
-  ul {
-    display: flex;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+
   img {
     width: 200px;
-    display: flex;
+    border-radius: 10px;
   }
-  background-color: #ccc;
+  ul {
+    color: #6096b4;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    /* border: solid red 2px; */
+  }
+  li {
+    color: #6096b4;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+  }
+  li:hover {
+    color: #0078aa;
+  }
 `;

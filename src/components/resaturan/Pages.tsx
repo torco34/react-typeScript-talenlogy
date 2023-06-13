@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Task } from "./interface/Task";
 import { produsts } from "./produsts";
 import { Product } from "./Product";
-import { Formulario } from "./styled/styles";
+import { Formulario, Body } from "./styled/styles";
 import { BsSearch } from "react-icons/bs";
 
 export const Pages = () => {
@@ -31,7 +31,9 @@ export const Pages = () => {
           </div>
         </form>
       </Formulario>
-      <Product task={tasks} />
+      
+        <Product task={tasks} />
+      
     </div>
   );
 };

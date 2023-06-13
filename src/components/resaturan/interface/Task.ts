@@ -3,5 +3,6 @@ export interface Task {
   name: string;
   producto: string;
   direction: string;
+  telefono?: string;
   img: string;
 }

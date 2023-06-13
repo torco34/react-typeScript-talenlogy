@@ -41,17 +41,23 @@ export const Body = ({ task }: Props) => {
   return (
     <>
       <ContainerBody>
-        <ul className="nav-link text-primary">
+        <div className="p-4 border mt-2 ">
           <img src={task.img} alt="foto" />
-          <li onClick={showData}>{task.name}</li>
-        </ul>
-        {showInfo ? (
-          <div>
-            <img src={task.img} alt="" />
-            <h2>{task?.name}</h2>
-            <h2>{task.direction}</h2>
-          </div>
-        ) : null}
+
+          <ul className="t-3">
+            <li onClick={showData}>{task.name}</li>
+          </ul>
+        </div>
+        <div>
+          {showInfo ? (
+            <div>
+              <img src={task.img} alt="" />
+              <h4>{task?.name}</h4>
+              <h6>Direcion: {task.direction}</h6>
+              <h6>Telefon: {task.telefono}</h6>
+            </div>
+          ) : null}
+        </div>
       </ContainerBody>
     </>
   );
