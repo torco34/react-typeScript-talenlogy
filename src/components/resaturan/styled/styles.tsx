@@ -37,12 +37,13 @@ export const ContainerBody = styled.div`
     text-transform: uppercase;
   }
   li {
-    color: #3e54ac;
+    color: #0078aa;
+
     text-decoration: none;
     list-style: none;
     padding: 10px;
   }
   li:hover {
-    color: #0078aa;
+    color: #3e54ac;
   }
 `;

@@ -16,10 +16,12 @@ const ContainerHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
   }
   a {
     color: #fff;
     margin: 20px;
+    text-decoration: none;
   }
 `;
 export { ContainerHeader };
