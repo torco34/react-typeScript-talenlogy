@@ -1,6 +1,10 @@
 import React, { Children, useState } from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import { Task } from "./interface/Task";
 import { ContainerBody } from "./styled/styles";
+import { Link } from "react-router-dom";
 interface Props {
   task: Task;
 }
@@ -40,25 +44,38 @@ export const Body = ({ task }: Props) => {
 
   return (
     <>
-      <ContainerBody>
-        <div className="p-4 border mt-2 ">
-          <img src={task.img} alt="foto" />
+      <Container>
+        <Row>
+          <Col>
+            <ContainerBody>
+              <div className="p-4  mt-2 ">
+                <img src={task.img} alt="foto" />
 
-          <ul className="t-3">
-            <li onClick={showData}>{task.name}</li>
-          </ul>
-        </div>
-        <div>
-          {showInfo ? (
-            <div>
-              <img src={task.img} alt="" />
-              <h4>{task?.name}</h4>
-              <h6>Direcion: {task.direction}</h6>
-              <h6>Telefon: {task.telefono}</h6>
-            </div>
-          ) : null}
-        </div>
-      </ContainerBody>
+                <ul className="t-3">
+                  <li className="nav-link" onClick={showData}>{task.name}</li>
+                </ul>
+              </div>
+            </ContainerBody>
+          </Col>
+          <Col>
+            <ContainerBody>
+              <div >
+                {showInfo ? (
+                  <div className="p-4 border">
+                    <img src={task.img} alt="" />
+                    <h4>{task?.name}</h4>
+                    <h5>Producto: {task.producto}</h5>
+                    <h6>Direcion: {task.direction}</h6>
+                    <h6>Telefon: {task.telefono}</h6>
+
+                    <Link to="">web {task.web}</Link>
+                  </div>
+                ) : null}
+              </div>
+            </ContainerBody>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

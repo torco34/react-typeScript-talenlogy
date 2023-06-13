@@ -4,5 +4,6 @@ export interface Task {
   producto: string;
   direction: string;
   telefono?: string;
+  web?: string;
   img: string;
 }

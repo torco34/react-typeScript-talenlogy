@@ -26,18 +26,18 @@ export const ContainerBody = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 
   img {
-    width: 200px;
+    width: 300px;
+    height: 150px;
     border-radius: 10px;
   }
   ul {
-    color: #6096b4;
     cursor: pointer;
     padding: 0;
     margin: 0;
-    /* border: solid red 2px; */
+    text-transform: uppercase;
   }
   li {
-    color: #6096b4;
+    color: #3e54ac;
     text-decoration: none;
     list-style: none;
     padding: 10px;

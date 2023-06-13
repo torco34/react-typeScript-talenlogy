@@ -7,7 +7,11 @@ const colors = {
 const ContainerHeader = styled.div`
   width: 100%;
   color: #fff;
-  background-color: #b799ff;
+  height: 40px;
+  background-color: #212a3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   ul li {
     display: flex;
     align-items: center;
@@ -15,6 +19,7 @@ const ContainerHeader = styled.div`
   }
   a {
     color: #fff;
+    margin: 20px;
   }
 `;
 export { ContainerHeader };
