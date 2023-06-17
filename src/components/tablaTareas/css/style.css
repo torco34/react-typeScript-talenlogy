@@ -1,0 +1,25 @@
+.containerItem {
+  position: relative;
+  padding: 20px;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.borderLista {
+  background-color: #eeeeee;
+  height: 100vh;
+}
+.divTexto {
+  background-color: #394867;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  width: 40%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
