@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import { Perfil } from "./pages/Perfil";
 import { Header } from "./components/Header";
+import { Perfil } from "./pages/Perfil";
 import { Inicio } from "./pages/Inicio";
-import { PagesTarea } from "./components/tablaTareas/PagesTarea";
 import { Pages } from "./components/resaturan/Pages";
+import { PagesTarea } from "./components/tablaTareas/PagesTarea";
+import { Map } from "./components/Map/Map";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +15,7 @@ const App: React.FC = () => {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/pages" element={<Pages />} />
         <Route path="/tarea" element={<PagesTarea />} />
+        <Route path="/map" element={<Map />} />
         {/* <Route path="/index" element={<Index />}></Route>
         <Route path="/pages" element={<Pages2 />}></Route>
         <Route path="/pages2" element={<Books />}></Route>

@@ -9,6 +9,7 @@ export const Header = () => {
         <Link to="/perfil">Perfil</Link>
         <Link to="/tarea">Tabla De Tareas</Link>
         <Link to="/pages">Restaurant</Link>
+        <Link to="/map">Map</Link>
       </div>
     </ContainerHeader>
   );
