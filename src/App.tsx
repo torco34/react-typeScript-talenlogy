@@ -5,7 +5,8 @@ import { Inicio } from "./pages/Inicio";
 import { Pages } from "./components/resaturan/Pages";
 import { PagesTarea } from "./components/tablaTareas/PagesTarea";
 import { Map } from "./components/Map/Map";
-
+import { Form } from "./components/Form/Form";
+Form;
 const App: React.FC = () => {
   return (
     <Router>
@@ -16,7 +17,8 @@ const App: React.FC = () => {
         <Route path="/pages" element={<Pages />} />
         <Route path="/tarea" element={<PagesTarea />} />
         <Route path="/map" element={<Map />} />
-        {/* <Route path="/index" element={<Index />}></Route>
+        <Route path="/form" element={<Form />} />
+        {/* <Route path="/index" element={<Index />}/>
         <Route path="/pages" element={<Pages2 />}></Route>
         <Route path="/pages2" element={<Books />}></Route>
         <Route path="/pages3" element={<PagesEjercicio />}></Route>

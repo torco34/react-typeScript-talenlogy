@@ -10,6 +10,7 @@ export const Header = () => {
         <Link to="/tarea">Tabla De Tareas</Link>
         <Link to="/pages">Restaurant</Link>
         <Link to="/map">Map</Link>
+        <Link to="/form">Formulario</Link>
       </div>
     </ContainerHeader>
   );
