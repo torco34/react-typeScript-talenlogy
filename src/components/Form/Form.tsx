@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../../assets/styled/Form.scss";
 // esta section  es el tipado de typescript valuado el valor de input
 interface FormValues {
   name: string;
@@ -57,10 +57,10 @@ export const Form = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container contaiderForm">
       {/* <Formulario> */}
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="div">
           <label>Name:</label>
           <input
             type="text"
@@ -71,7 +71,7 @@ export const Form = () => {
           {errors.name && <span>{errors.name}</span>}
         </div>
 
-        <div>
+        <div className="div">
           <label>Email:</label>
           <input
             type="email"
@@ -82,7 +82,7 @@ export const Form = () => {
           {errors.email && <span>{errors.email}</span>}
         </div>
 
-        <div>
+        <div className="div">
           <label>Password:</label>
           <input
             type="password"
@@ -92,7 +92,7 @@ export const Form = () => {
           />
           {errors.password && <span>{errors.password}</span>}
         </div>
-
+        <br></br>
         <button type="submit">Register</button>
       </form>
       {/* </Formulario> */}
