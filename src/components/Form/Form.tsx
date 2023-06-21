@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Formulario } from "./css/styled";
 // esta section  es el tipado de typescript valuado el valor de input
 interface FormValues {
   name: string;
@@ -56,43 +57,45 @@ export const Form = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={values.name}
-            onChange={handleChange}
-          />
-          {errors.name && <span>{errors.name}</span>}
-        </div>
+    <div className="container">
+      {/* <Formulario> */}
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={values.name}
+              onChange={handleChange}
+            />
+            {errors.name && <span>{errors.name}</span>}
+          </div>
 
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={values.email}
-            onChange={handleChange}
-          />
-          {errors.email && <span>{errors.email}</span>}
-        </div>
+          <div>
+            <label>Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+            />
+            {errors.email && <span>{errors.email}</span>}
+          </div>
 
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={values.password}
-            onChange={handleChange}
-          />
-          {errors.password && <span>{errors.password}</span>}
-        </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              name="password"
+              value={values.password}
+              onChange={handleChange}
+            />
+            {errors.password && <span>{errors.password}</span>}
+          </div>
 
-        <button type="submit">Register</button>
-      </form>
+          <button type="submit">Register</button>
+        </form>
+      {/* </Formulario> */}
     </div>
   );
 };
