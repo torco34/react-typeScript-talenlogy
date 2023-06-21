@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Task } from "./interface/Task";
 import { produsts } from "./produsts";
 import { Product } from "./Product";
-import { Formulario} from "./styled/styles";
+// import { Formulario} from "./styled/styles";
 import { BsSearch } from "react-icons/bs";
 
 export const Pages = () => {
@@ -21,7 +21,7 @@ export const Pages = () => {
 
   return (
     <div className="text-center">
-      <Formulario>
+      {/* <Formulario> */}
         <form action="">
           <div className="container">
             <input type="text" placeholder="Search" onChange={handleFilter} />
@@ -30,7 +30,7 @@ export const Pages = () => {
             </span>
           </div>
         </form>
-      </Formulario>
+      {/* </Formulario> */}
       
         <Product task={tasks} />
       

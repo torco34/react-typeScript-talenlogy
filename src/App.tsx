@@ -4,9 +4,9 @@ import { Perfil } from "./pages/Perfil";
 import { Inicio } from "./pages/Inicio";
 import { Pages } from "./components/resaturan/Pages";
 import { PagesTarea } from "./components/tablaTareas/PagesTarea";
-import { Map } from "./components/Map/Map";
+Map
 import { Form } from "./components/Form/Form";
-Form;
+import { Map } from "./components/Map/Map";
 const App: React.FC = () => {
   return (
     <Router>
